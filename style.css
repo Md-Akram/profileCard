@@ -1,0 +1,97 @@
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--darkCyan);
+  text-transform: capitalize;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  width: 300px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  background: url(images/bg-pattern-top.svg);
+  background-size: cover;
+  background-position-x: right;
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  bottom: 120px;
+  right: 120px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  background: url(images/bg-pattern-top.svg);
+  background-size: cover;
+  background-position-x: left;
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  top: 120px;
+  left: 120px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.card-top {
+  margin: 0;
+  height: 120px;
+  position: relative;
+}
+
+.card-top::before {
+  content: '';
+  background: url(images/image-victor.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.card-top > img {
+  margin: 0;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-bottom {
+  margin: 0;
+  padding-top: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.numbers {
+  border-top: 1px solid var(--darkGray);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2,
+h3 {
+  color: var(--veryDarkBlue);
+}
+p,
+span {
+  color: var(--darkGray);
+}
